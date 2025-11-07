@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\dimma\Desktop\tiff-fix\build\CMakeFiles\402a5f5e74fc63346e09550b2d3a6c48\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{F7D43985-0963-3A96-9135-D1FFE7D0DB0A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

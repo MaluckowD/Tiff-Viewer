@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\ppm2tiff_autogen\mocs_compilation_Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\tools\ppm2tiff.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\port\getopt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\ppm2tiff_autogen\mocs_compilation_Release.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\ppm2tiff_autogen\mocs_compilation_MinSizeRel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\ppm2tiff_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\tools\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CB61E1FC-5CA4-3730-8BB4-71CB55B51D95}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

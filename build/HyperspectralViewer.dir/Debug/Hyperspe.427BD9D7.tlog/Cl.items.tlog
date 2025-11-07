@@ -1,0 +1,11 @@
+C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer_autogen\mocs_compilation_Debug.cpp;C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer.dir\Debug\mocs_compilation_Debug.obj
+C:\Users\dimma\Desktop\tiff-fix\main.cpp;C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer.dir\Debug\main.obj
+C:\Users\dimma\Desktop\tiff-fix\main_window.cpp;C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer.dir\Debug\main_window.obj
+C:\Users\dimma\Desktop\tiff-fix\tiff_reader.cpp;C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer.dir\Debug\tiff_reader.obj
+C:\Users\dimma\Desktop\tiff-fix\hyperspectral_image.cpp;C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer.dir\Debug\hyperspectral_image.obj
+C:\Users\dimma\Desktop\tiff-fix\histogram_widget.cpp;C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer.dir\Debug\histogram_widget.obj
+C:\Users\dimma\Desktop\tiff-fix\dialogs.cpp;C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer.dir\Debug\dialogs.obj
+C:\Users\dimma\Desktop\tiff-fix\spectral_reader.cpp;C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer.dir\Debug\spectral_reader.obj
+C:\Users\dimma\Desktop\tiff-fix\spectral_info_dialog.cpp;C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer.dir\Debug\spectral_info_dialog.obj
+C:\Users\dimma\Desktop\tiff-fix\image_label.cpp;C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer.dir\Debug\image_label.obj
+C:\Users\dimma\Desktop\tiff-fix\spectral_curve_dialog.cpp;C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer.dir\Debug\spectral_curve_dialog.obj

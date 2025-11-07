@@ -1,0 +1,50 @@
+{
+    "version": 3,
+    "vendor": {
+        "conan": {}
+    },
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 15,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "conan-default",
+            "displayName": "'conan-default' config",
+            "description": "'conan-default' configure using 'Visual Studio 17 2022' generator",
+            "generator": "Visual Studio 17 2022",
+            "cacheVariables": {
+                "CMAKE_POLICY_DEFAULT_CMP0091": "NEW"
+            },
+            "toolset": {
+                "value": "v143",
+                "strategy": "external"
+            },
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "toolchainFile": "conan_toolchain.cmake",
+            "binaryDir": "C:\\Users\\dimma\\Desktop\\tiff-fix\\build"
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "conan-debug",
+            "configurePreset": "conan-default",
+            "configuration": "Debug",
+            "jobs": 16
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "conan-debug",
+            "configurePreset": "conan-default",
+            "configuration": "Debug",
+            "environment": {
+                "OPENSSL_MODULES": "C:\\Users\\dimma\\.conan2\\p\\b\\opensec738de4a000f\\p\\lib\\ossl-modules"
+            }
+        }
+    ]
+}

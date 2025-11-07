@@ -1,0 +1,11 @@
+prefix=C:/Program Files/HyperspectralViewer
+exec_prefix=C:/Program Files/HyperspectralViewer
+libdir=C:/Program Files/HyperspectralViewer/lib
+includedir=C:/Program Files/HyperspectralViewer/include
+
+Name: libtiff
+Description:  Tag Image File Format (TIFF) library.
+Version: 
+Libs: -LC:/Program Files/HyperspectralViewer/lib -ltiff
+Libs.private: 
+Cflags: -IC:/Program Files/HyperspectralViewer/include

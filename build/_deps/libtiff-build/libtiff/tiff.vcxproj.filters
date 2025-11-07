@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiff_autogen\mocs_compilation_Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_aux.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_close.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_codec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_color.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_compress.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_dir.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_dirinfo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_dirread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_dirwrite.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_dumpmode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_error.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_extension.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_fax3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_fax3sm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_flush.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_getimage.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_jbig.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_jpeg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_jpeg_12.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_lerc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_luv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_lzma.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_lzw.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_next.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_ojpeg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_open.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_packbits.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_pixarlog.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_predict.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_print.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_read.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_strip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_swab.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_thunder.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_tile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_version.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_warning.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_webp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_write.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_zip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_zstd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_win32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiff_autogen\mocs_compilation_Release.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiff_autogen\mocs_compilation_MinSizeRel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiff_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tiff.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tiffio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tiffvers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiffconf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\t4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_dir.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_predict.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tiffiop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\uvcode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tif_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\libtiff.def">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{0053BD4C-F1D2-3B4A-9D2C-BB61D479258E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CB61E1FC-5CA4-3730-8BB4-71CB55B51D95}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

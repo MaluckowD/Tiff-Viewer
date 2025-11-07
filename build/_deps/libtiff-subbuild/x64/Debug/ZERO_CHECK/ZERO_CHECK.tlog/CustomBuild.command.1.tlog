@@ -1,0 +1,10 @@
+^C:\USERS\DIMMA\DESKTOP\TIFF-FIX\BUILD\_DEPS\LIBTIFF-SUBBUILD\CMAKEFILES\880BA2F94843BB59B6F161A2FC00AC5E\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-subbuild -BC:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-subbuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-subbuild/libtiff-populate.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

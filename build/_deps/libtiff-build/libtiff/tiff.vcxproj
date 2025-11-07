@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x86</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7695F332-CA9B-3B2F-825A-55537FB2A5E4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>tiff</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">tiff.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">tiffd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">tiff.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">tiff</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">tiff.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">tiff</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">tiff.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">tiff</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiff_autogen\include_Debug;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;TIFF_DISABLE_DEPRECATED;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;TIFF_DISABLE_DEPRECATED;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiff_autogen\include_Debug;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiff_autogen\include_Debug;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Automatic MOC and UIC for target tiff</Message>
+      <Command>setlocal
+cd C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-build/libtiff/CMakeFiles/tiff_autogen.dir/AutogenInfo.json Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiff_autogen\include_Release;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;TIFF_DISABLE_DEPRECATED;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;TIFF_DISABLE_DEPRECATED;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiff_autogen\include_Release;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiff_autogen\include_Release;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Automatic MOC and UIC for target tiff</Message>
+      <Command>setlocal
+cd C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-build/libtiff/CMakeFiles/tiff_autogen.dir/AutogenInfo.json Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiff_autogen\include_MinSizeRel;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;TIFF_DISABLE_DEPRECATED;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;TIFF_DISABLE_DEPRECATED;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiff_autogen\include_MinSizeRel;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiff_autogen\include_MinSizeRel;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Automatic MOC and UIC for target tiff</Message>
+      <Command>setlocal
+cd C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-build/libtiff/CMakeFiles/tiff_autogen.dir/AutogenInfo.json MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiff_autogen\include_RelWithDebInfo;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;TIFF_DISABLE_DEPRECATED;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;TIFF_DISABLE_DEPRECATED;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiff_autogen\include_RelWithDebInfo;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiff_autogen\include_RelWithDebInfo;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Automatic MOC and UIC for target tiff</Message>
+      <Command>setlocal
+cd C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-build/libtiff/CMakeFiles/tiff_autogen.dir/AutogenInfo.json RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-src/libtiff/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dimma/Desktop/tiff-fix -BC:/Users/dimma/Desktop/tiff-fix/build --check-stamp-file C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-build/libtiff/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_config.h.cmake.in;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tiffconf.h.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-src/libtiff/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dimma/Desktop/tiff-fix -BC:/Users/dimma/Desktop/tiff-fix/build --check-stamp-file C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-build/libtiff/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_config.h.cmake.in;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tiffconf.h.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-src/libtiff/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dimma/Desktop/tiff-fix -BC:/Users/dimma/Desktop/tiff-fix/build --check-stamp-file C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-build/libtiff/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_config.h.cmake.in;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tiffconf.h.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-src/libtiff/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dimma/Desktop/tiff-fix -BC:/Users/dimma/Desktop/tiff-fix/build --check-stamp-file C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-build/libtiff/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_config.h.cmake.in;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tiffconf.h.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiff_autogen\mocs_compilation_Debug.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <None Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\libtiff.def" />
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tiff.h" />
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tiffio.h" />
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tiffvers.h" />
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiffconf.h" />
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\t4.h" />
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_dir.h" />
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_predict.h" />
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tiffiop.h" />
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\uvcode.h" />
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tif_config.h" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_aux.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_close.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_codec.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_color.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_compress.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_dir.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_dirinfo.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_dirread.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_dirwrite.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_dumpmode.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_error.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_extension.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_fax3.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_fax3sm.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_flush.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_getimage.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_jbig.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_jpeg.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_jpeg_12.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_lerc.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_luv.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_lzma.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_lzw.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_next.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_ojpeg.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_open.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_packbits.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_pixarlog.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_predict.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_print.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_read.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_strip.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_swab.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_thunder.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_tile.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_version.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_warning.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_webp.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_write.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_zip.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_zstd.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff\tif_win32.c" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiff_autogen\mocs_compilation_Release.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiff_autogen\mocs_compilation_MinSizeRel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiff_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\ZERO_CHECK.vcxproj">
+      <Project>{DD68F2B4-9773-31F9-8AFB-592AAC5B286B}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,10 @@
+^C:\USERS\DIMMA\DESKTOP\TIFF-FIX\BUILD\_DEPS\LIBTIFF-SRC\LIBTIFF\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dimma/Desktop/tiff-fix -BC:/Users/dimma/Desktop/tiff-fix/build --check-stamp-file C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-build/libtiff/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

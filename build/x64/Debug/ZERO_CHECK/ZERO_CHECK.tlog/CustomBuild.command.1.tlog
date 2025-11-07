@@ -1,0 +1,10 @@
+^C:\USERS\DIMMA\DESKTOP\TIFF-FIX\BUILD\CMAKEFILES\3F94D228C2F7E9E884046DFFA5C355AA\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dimma/Desktop/tiff-fix -BC:/Users/dimma/Desktop/tiff-fix/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/dimma/Desktop/tiff-fix/build/HyperspectralViewer.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

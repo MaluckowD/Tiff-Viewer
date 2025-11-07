@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x86</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B96A37C0-0A31-3634-9AC5-BA8661DC82A3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dimma/Desktop/tiff-fix -BC:/Users/dimma/Desktop/tiff-fix/build --check-stamp-file C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindGLUT.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\TestBigEndian.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\AutotoolsCompat.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\AutotoolsVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\CXXLibrary.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\CompilerChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\DeflateCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindCMath.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindDeflate.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindJBIG.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindJPEG.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindLERC.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindLibLZMA.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindWebP.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindZSTD.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\IncludeChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\InternalCodecs.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\JBIGCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\JPEGCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\LERCCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\LZMACodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\LargeFileSupport.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\LibraryFeatures.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\LinkerChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\OpenGLChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\PixarLogCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\PkgConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\ProcessorChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\Release.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\SymbolChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\TypeSizeChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\WebPCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\WindowsSupport.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\ZSTDCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff-4.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dimma/Desktop/tiff-fix -BC:/Users/dimma/Desktop/tiff-fix/build --check-stamp-file C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindGLUT.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\TestBigEndian.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\AutotoolsCompat.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\AutotoolsVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\CXXLibrary.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\CompilerChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\DeflateCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindCMath.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindDeflate.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindJBIG.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindJPEG.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindLERC.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindLibLZMA.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindWebP.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindZSTD.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\IncludeChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\InternalCodecs.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\JBIGCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\JPEGCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\LERCCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\LZMACodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\LargeFileSupport.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\LibraryFeatures.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\LinkerChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\OpenGLChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\PixarLogCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\PkgConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\ProcessorChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\Release.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\SymbolChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\TypeSizeChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\WebPCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\WindowsSupport.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\ZSTDCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff-4.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dimma/Desktop/tiff-fix -BC:/Users/dimma/Desktop/tiff-fix/build --check-stamp-file C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindGLUT.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\TestBigEndian.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\AutotoolsCompat.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\AutotoolsVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\CXXLibrary.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\CompilerChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\DeflateCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindCMath.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindDeflate.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindJBIG.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindJPEG.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindLERC.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindLibLZMA.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindWebP.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindZSTD.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\IncludeChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\InternalCodecs.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\JBIGCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\JPEGCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\LERCCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\LZMACodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\LargeFileSupport.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\LibraryFeatures.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\LinkerChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\OpenGLChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\PixarLogCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\PkgConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\ProcessorChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\Release.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\SymbolChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\TypeSizeChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\WebPCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\WindowsSupport.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\ZSTDCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff-4.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dimma/Desktop/tiff-fix -BC:/Users/dimma/Desktop/tiff-fix/build --check-stamp-file C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindGLUT.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindPkgConfig.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\TestBigEndian.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\AutotoolsCompat.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\AutotoolsVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\CXXLibrary.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\CompilerChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\DeflateCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindCMath.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindDeflate.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindJBIG.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindJPEG.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindLERC.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindLibLZMA.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindWebP.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\FindZSTD.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\IncludeChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\InternalCodecs.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\JBIGCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\JPEGCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\LERCCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\LZMACodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\LargeFileSupport.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\LibraryFeatures.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\LinkerChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\OpenGLChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\PixarLogCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\PkgConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\ProcessorChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\Release.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\SymbolChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\TypeSizeChecks.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\WebPCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\WindowsSupport.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\cmake\ZSTDCodec.cmake;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff-4.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\ZERO_CHECK.vcxproj">
+      <Project>{DD68F2B4-9773-31F9-8AFB-592AAC5B286B}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\contrib\addtiffo\addtiffo.vcxproj">
+      <Project>{421D7453-9C18-3597-AECC-888EBC1B793D}</Project>
+      <Name>addtiffo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\test\ascii_tag.vcxproj">
+      <Project>{54554EDE-530A-341B-85DD-7D34CE7373D2}</Project>
+      <Name>ascii_tag</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\test\custom_dir.vcxproj">
+      <Project>{AC9C4A79-96C0-37EC-8F5B-14F741B2433F}</Project>
+      <Name>custom_dir</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\test\custom_dir_EXIF_231.vcxproj">
+      <Project>{D8D46691-F8BD-3F14-BB2A-6409BAEF92FB}</Project>
+      <Name>custom_dir_EXIF_231</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\test\defer_strile_loading.vcxproj">
+      <Project>{E9D382E0-E237-3098-BC48-501B8B17B1A8}</Project>
+      <Name>defer_strile_loading</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\test\defer_strile_writing.vcxproj">
+      <Project>{D7D6915F-1419-32DD-9333-F6132728BA16}</Project>
+      <Name>defer_strile_writing</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\fax2ps.vcxproj">
+      <Project>{4A1D14C4-8A59-39A9-8C66-70CF8127D67C}</Project>
+      <Name>fax2ps</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\fax2tiff.vcxproj">
+      <Project>{6A375D99-E1B8-3EB9-B5C6-413FA855C4D8}</Project>
+      <Name>fax2tiff</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\contrib\iptcutil\iptcutil.vcxproj">
+      <Project>{34E3A624-3D0C-3164-8291-FDAB2F9DE0B5}</Project>
+      <Name>iptcutil</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\test\long_tag.vcxproj">
+      <Project>{05CA7770-20DC-394B-AE78-52E0B241D8BD}</Project>
+      <Name>long_tag</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\mkg3states.vcxproj">
+      <Project>{4802A7A3-18CA-3BEA-A029-1EA62E65DA88}</Project>
+      <Name>mkg3states</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\pal2rgb.vcxproj">
+      <Project>{301ADBC8-C2EC-389A-97BA-CEE6CB42A3DA}</Project>
+      <Name>pal2rgb</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\port\port.vcxproj">
+      <Project>{118CD4A0-DBFB-36BE-8220-6D2B0C9A071E}</Project>
+      <Name>port</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\ppm2tiff.vcxproj">
+      <Project>{ABE2D683-0B79-354A-AE9C-FD5E0F4F7A2A}</Project>
+      <Name>ppm2tiff</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\test\rational_precision2double.vcxproj">
+      <Project>{EC003CC9-B439-3074-B6BF-FAE12A5B5248}</Project>
+      <Name>rational_precision2double</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\raw2tiff.vcxproj">
+      <Project>{E15B49FD-E0D5-3189-A434-74C62A9B9AC9}</Project>
+      <Name>raw2tiff</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\test\rewrite.vcxproj">
+      <Project>{27CF93E2-789C-3394-B8EA-6BBB9963D8E5}</Project>
+      <Name>rewrite</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\rgb2ycbcr.vcxproj">
+      <Project>{A50E276A-5DF2-347B-83B3-4D844B01DDC3}</Project>
+      <Name>rgb2ycbcr</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\test\short_tag.vcxproj">
+      <Project>{B2C6D4FE-3D2C-3DF9-AEBC-4E51D940CDCE}</Project>
+      <Name>short_tag</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\test\strip_rw.vcxproj">
+      <Project>{A5DBA044-E49D-32B4-BD14-AE828BDAE87B}</Project>
+      <Name>strip_rw</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\test\testtypes.vcxproj">
+      <Project>{E21D251B-2EFD-3DF2-82B5-784D223AEA9E}</Project>
+      <Name>testtypes</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\thumbnail.vcxproj">
+      <Project>{EBEBBDBC-8469-3225-865A-20A5D85B3BFB}</Project>
+      <Name>thumbnail</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiff.vcxproj">
+      <Project>{7695F332-CA9B-3B2F-825A-55537FB2A5E4}</Project>
+      <Name>tiff</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\contrib\dbs\tiff-bi.vcxproj">
+      <Project>{3C926F8E-4636-3BFC-A2B5-8213EFC386FA}</Project>
+      <Name>tiff-bi</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\contrib\dbs\tiff-grayscale.vcxproj">
+      <Project>{07BBB554-33B3-3C4C-BFBA-A83F2296FBA1}</Project>
+      <Name>tiff-grayscale</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\contrib\dbs\tiff-palette.vcxproj">
+      <Project>{1589E6FB-16AF-32CE-A5C3-3A407D9C5AD7}</Project>
+      <Name>tiff-palette</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\contrib\dbs\tiff-rgb.vcxproj">
+      <Project>{03B6C8F8-26DB-3C14-8100-B098BDDA7192}</Project>
+      <Name>tiff-rgb</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\tiff2bw.vcxproj">
+      <Project>{6D591305-A60B-3E35-84BE-8ED51DADAF11}</Project>
+      <Name>tiff2bw</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\tiff2pdf.vcxproj">
+      <Project>{38739FA6-C0AD-3DC7-BA2F-4693F3701FCA}</Project>
+      <Name>tiff2pdf</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\tiff2ps.vcxproj">
+      <Project>{F59C0086-78AE-347E-8144-23B01B2A80A7}</Project>
+      <Name>tiff2ps</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\tiff2rgba.vcxproj">
+      <Project>{0932ECB6-23DB-3B5E-AD8A-1D807E23E007}</Project>
+      <Name>tiff2rgba</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\tiffcmp.vcxproj">
+      <Project>{DC0CA05F-A112-3CB5-9F36-8211BAFBA59C}</Project>
+      <Name>tiffcmp</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\tiffcp.vcxproj">
+      <Project>{EE94BFFF-D8F3-34EA-BC1C-961A6E8E0E1A}</Project>
+      <Name>tiffcp</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\tiffcrop.vcxproj">
+      <Project>{EAF5A9DA-6BD9-3109-B323-CAC086E5FBEF}</Project>
+      <Name>tiffcrop</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\tiffdither.vcxproj">
+      <Project>{DCB8E660-4242-3987-B08E-0DBA47455230}</Project>
+      <Name>tiffdither</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\tiffdump.vcxproj">
+      <Project>{B1BEB734-D756-3E1A-B503-D4E63679CAA0}</Project>
+      <Name>tiffdump</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\tiffinfo.vcxproj">
+      <Project>{01ABBA02-1026-3465-AC8C-6177DB9C7553}</Project>
+      <Name>tiffinfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\tiffmedian.vcxproj">
+      <Project>{DC83AD09-24DA-34F3-B0FE-26862C40E9AE}</Project>
+      <Name>tiffmedian</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\tiffset.vcxproj">
+      <Project>{608945BD-98F2-3AA8-A47A-CCDFDFE2F12E}</Project>
+      <Name>tiffset</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\tools\tiffsplit.vcxproj">
+      <Project>{6C2F54FA-F41B-3B9B-AD98-A88AE51AB537}</Project>
+      <Name>tiffsplit</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiffxx.vcxproj">
+      <Project>{3A91B3DB-5766-3DF7-8B53-44BCE181F964}</Project>
+      <Name>tiffxx</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

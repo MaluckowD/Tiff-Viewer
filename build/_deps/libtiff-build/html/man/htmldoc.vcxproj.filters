@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\dimma\Desktop\tiff-fix\build\CMakeFiles\813a0ec42dbc7a99071cbb1e6627f1c2\htmldoc.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\html\man\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\html\man\CMakeFiles\htmldoc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{F7D43985-0963-3A96-9135-D1FFE7D0DB0A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,152 @@
+^C:\USERS\DIMMA\DESKTOP\TIFF-FIX\BUILD\_DEPS\LIBTIFF-SUBBUILD\CMAKEFILES\6E49C26E38D39FCDFA8EC29BAE29C339\LIBTIFF-POPULATE-MKDIR.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-subbuild/libtiff-populate-prefix/tmp/libtiff-populate-mkdirs.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-subbuild/libtiff-populate-prefix/src/libtiff-populate-stamp/Debug/libtiff-populate-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\DIMMA\DESKTOP\TIFF-FIX\BUILD\_DEPS\LIBTIFF-SUBBUILD\CMAKEFILES\6E49C26E38D39FCDFA8EC29BAE29C339\LIBTIFF-POPULATE-DOWNLOAD.RULE
+setlocal
+cd C:\Users\dimma\Desktop\tiff-fix\build\_deps
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-subbuild/libtiff-populate-prefix/src/libtiff-populate-stamp/download-libtiff-populate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-subbuild/libtiff-populate-prefix/src/libtiff-populate-stamp/verify-libtiff-populate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-subbuild/libtiff-populate-prefix/src/libtiff-populate-stamp/extract-libtiff-populate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-subbuild/libtiff-populate-prefix/src/libtiff-populate-stamp/Debug/libtiff-populate-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\DIMMA\DESKTOP\TIFF-FIX\BUILD\_DEPS\LIBTIFF-SUBBUILD\CMAKEFILES\6E49C26E38D39FCDFA8EC29BAE29C339\LIBTIFF-POPULATE-UPDATE.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-subbuild/libtiff-populate-prefix/src/libtiff-populate-stamp/Debug/libtiff-populate-update
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\DIMMA\DESKTOP\TIFF-FIX\BUILD\_DEPS\LIBTIFF-SUBBUILD\CMAKEFILES\6E49C26E38D39FCDFA8EC29BAE29C339\LIBTIFF-POPULATE-PATCH.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-subbuild/libtiff-populate-prefix/src/libtiff-populate-stamp/Debug/libtiff-populate-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\DIMMA\DESKTOP\TIFF-FIX\BUILD\_DEPS\LIBTIFF-SUBBUILD\CMAKEFILES\6E49C26E38D39FCDFA8EC29BAE29C339\LIBTIFF-POPULATE-CONFIGURE.RULE
+setlocal
+cd C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-subbuild/libtiff-populate-prefix/src/libtiff-populate-stamp/Debug/libtiff-populate-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\DIMMA\DESKTOP\TIFF-FIX\BUILD\_DEPS\LIBTIFF-SUBBUILD\CMAKEFILES\6E49C26E38D39FCDFA8EC29BAE29C339\LIBTIFF-POPULATE-BUILD.RULE
+setlocal
+cd C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-subbuild/libtiff-populate-prefix/src/libtiff-populate-stamp/Debug/libtiff-populate-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\DIMMA\DESKTOP\TIFF-FIX\BUILD\_DEPS\LIBTIFF-SUBBUILD\CMAKEFILES\6E49C26E38D39FCDFA8EC29BAE29C339\LIBTIFF-POPULATE-INSTALL.RULE
+setlocal
+cd C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-subbuild/libtiff-populate-prefix/src/libtiff-populate-stamp/Debug/libtiff-populate-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\DIMMA\DESKTOP\TIFF-FIX\BUILD\_DEPS\LIBTIFF-SUBBUILD\CMAKEFILES\6E49C26E38D39FCDFA8EC29BAE29C339\LIBTIFF-POPULATE-TEST.RULE
+setlocal
+cd C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-subbuild/libtiff-populate-prefix/src/libtiff-populate-stamp/Debug/libtiff-populate-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\DIMMA\DESKTOP\TIFF-FIX\BUILD\_DEPS\LIBTIFF-SUBBUILD\CMAKEFILES\FE215226E4A787D665F3537909E26D55\LIBTIFF-POPULATE-COMPLETE.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-subbuild/CMakeFiles/Debug
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-subbuild/CMakeFiles/Debug/libtiff-populate-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-subbuild/libtiff-populate-prefix/src/libtiff-populate-stamp/Debug/libtiff-populate-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\DIMMA\DESKTOP\TIFF-FIX\BUILD\_DEPS\LIBTIFF-SUBBUILD\CMAKEFILES\880BA2F94843BB59B6F161A2FC00AC5E\LIBTIFF-POPULATE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\DIMMA\DESKTOP\TIFF-FIX\BUILD\_DEPS\LIBTIFF-SUBBUILD\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-subbuild -BC:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-subbuild --check-stamp-file C:/Users/dimma/Desktop/tiff-fix/build/_deps/libtiff-subbuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

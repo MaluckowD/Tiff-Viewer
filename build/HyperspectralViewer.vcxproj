@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x86</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{427BD9D7-9DDF-3A0D-B168-2ED026746B5B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>HyperspectralViewer</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\dimma\Desktop\tiff-fix\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">HyperspectralViewer.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">HyperspectralViewer</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\dimma\Desktop\tiff-fix\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">HyperspectralViewer.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">HyperspectralViewer</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\dimma\Desktop\tiff-fix\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">HyperspectralViewer.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">HyperspectralViewer</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\dimma\Desktop\tiff-fix\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">HyperspectralViewer.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">HyperspectralViewer</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer_autogen\include_Debug;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include" /external:I "C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtCore" /external:I "C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/bin/archdatadir/mkspecs/win32-msvc" /external:I "C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtGui" /external:I "C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets" /external:I "C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtEventDispatcherSupport" /external:I "C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtFontDatabaseSupport" /external:I "C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtThemeSupport" /external:I "C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtAccessibilitySupport" /external:I "C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWindowsUIAutomationSupport"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;QT_CORE_LIB;PCRE2_STATIC;QT_GUI_LIB;LIBJPEG_STATIC;QT_WIDGETS_LIB;QT_EVENTDISPATCHER_SUPPORT_LIB;QT_FONTDATABASE_SUPPORT_LIB;QT_THEME_SUPPORT_LIB;QT_ACCESSIBILITY_SUPPORT_LIB;QT_WINDOWSUIAUTOMATION_SUPPORT_LIB;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;QT_CORE_LIB;PCRE2_STATIC;QT_GUI_LIB;LIBJPEG_STATIC;QT_WIDGETS_LIB;QT_EVENTDISPATCHER_SUPPORT_LIB;QT_FONTDATABASE_SUPPORT_LIB;QT_THEME_SUPPORT_LIB;QT_ACCESSIBILITY_SUPPORT_LIB;QT_WINDOWSUIAUTOMATION_SUPPORT_LIB;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer_autogen\include_Debug;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\include;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\include\QtCore;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\bin\archdatadir\mkspecs\win32-msvc;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\include\QtGui;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\include\QtWidgets;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\include\QtEventDispatcherSupport;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\include\QtFontDatabaseSupport;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\include\QtThemeSupport;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\include\QtAccessibilitySupport;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\include\QtWindowsUIAutomationSupport;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer_autogen\include_Debug;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\include;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\include\QtCore;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\bin\archdatadir\mkspecs\win32-msvc;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\include\QtGui;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\include\QtWidgets;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\include\QtEventDispatcherSupport;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\include\QtFontDatabaseSupport;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\include\QtThemeSupport;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\include\QtAccessibilitySupport;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\include\QtWindowsUIAutomationSupport;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Automatic MOC and UIC for target HyperspectralViewer</Message>
+      <Command>setlocal
+cd C:\Users\dimma\Desktop\tiff-fix\build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/dimma/Desktop/tiff-fix/build/CMakeFiles/HyperspectralViewer_autogen.dir/AutogenInfo.json Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Link>
+      <AdditionalDependencies>_deps\libtiff-build\libtiff\Debug\tiffd.lib;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\Qt5Widgetsd.lib;uxtheme.lib;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\bin\archdatadir\plugins\platforms\qwindowsd.lib;dwmapi.lib;imm32.lib;oleaut32.lib;shell32.lib;shlwapi.lib;winspool.lib;wtsapi32.lib;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\Qt5EventDispatcherSupportd.lib;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\Qt5FontDatabaseSupportd.lib;advapi32.lib;gdi32.lib;ole32.lib;user32.lib;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\Qt5ThemeSupportd.lib;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\Qt5AccessibilitySupportd.lib;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\Qt5WindowsUIAutomationSupportd.lib;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\Qt5Guid.lib;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\Qt5Cored.lib;version.lib;winmm.lib;netapi32.lib;userenv.lib;ws2_32.lib;C:\Users\dimma\.conan2\p\b\pcre288389b6c32299\p\lib\pcre2-posix-staticd.lib;C:\Users\dimma\.conan2\p\b\pcre288389b6c32299\p\lib\pcre2-32-staticd.lib;C:\Users\dimma\.conan2\p\b\pcre288389b6c32299\p\lib\pcre2-16-staticd.lib;C:\Users\dimma\.conan2\p\b\pcre288389b6c32299\p\lib\pcre2-8-staticd.lib;C:\Users\dimma\.conan2\p\b\doubl478e745b7a2e4\p\lib\double-conversion.lib;C:\Users\dimma\.conan2\p\b\zstd6d6f8ad41dadd\p\lib\zstd_static.lib;C:\Users\dimma\.conan2\p\b\freetc237b76632301\p\lib\freetype.lib;C:\Users\dimma\.conan2\p\b\bzip2905a0710ab0f8\p\lib\bz2.lib;C:\Users\dimma\.conan2\p\b\brotld1cbcf9fde704\p\lib\brotlienc.lib;C:\Users\dimma\.conan2\p\b\brotld1cbcf9fde704\p\lib\brotlidec.lib;C:\Users\dimma\.conan2\p\b\brotld1cbcf9fde704\p\lib\brotlicommon.lib;C:\Users\dimma\.conan2\p\b\libpn212eb23128092\p\lib\libpng16_staticd.lib;C:\Users\dimma\.conan2\p\b\zlib2845198e0994f\p\lib\zlib.lib;opengl32.lib;C:\Users\dimma\.conan2\p\b\libjp48a840aa8b67c\p\lib\libjpeg.lib;C:\Users\dimma\.conan2\p\b\md4c566c7dd492496\p\lib\md4c-html.lib;C:\Users\dimma\.conan2\p\b\md4c566c7dd492496\p\lib\md4c.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/lib;C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/lib/$(Configuration);C:/Users/dimma/.conan2/p/b/zlib2845198e0994f/p/lib;C:/Users/dimma/.conan2/p/b/zlib2845198e0994f/p/lib/$(Configuration);C:/Users/dimma/.conan2/p/b/pcre288389b6c32299/p/lib;C:/Users/dimma/.conan2/p/b/pcre288389b6c32299/p/lib/$(Configuration);C:/Users/dimma/.conan2/p/b/bzip2905a0710ab0f8/p/lib;C:/Users/dimma/.conan2/p/b/bzip2905a0710ab0f8/p/lib/$(Configuration);C:/Users/dimma/.conan2/p/b/doubl478e745b7a2e4/p/lib;C:/Users/dimma/.conan2/p/b/doubl478e745b7a2e4/p/lib/$(Configuration);C:/Users/dimma/.conan2/p/b/zstd6d6f8ad41dadd/p/lib;C:/Users/dimma/.conan2/p/b/zstd6d6f8ad41dadd/p/lib/$(Configuration);C:/Users/dimma/.conan2/p/b/freetc237b76632301/p/lib;C:/Users/dimma/.conan2/p/b/freetc237b76632301/p/lib/$(Configuration);C:/Users/dimma/.conan2/p/b/brotld1cbcf9fde704/p/lib;C:/Users/dimma/.conan2/p/b/brotld1cbcf9fde704/p/lib/$(Configuration);C:/Users/dimma/.conan2/p/b/libpn212eb23128092/p/lib;C:/Users/dimma/.conan2/p/b/libpn212eb23128092/p/lib/$(Configuration);C:/Users/dimma/.conan2/p/b/libjp48a840aa8b67c/p/lib;C:/Users/dimma/.conan2/p/b/libjp48a840aa8b67c/p/lib/$(Configuration);C:/Users/dimma/.conan2/p/b/md4c566c7dd492496/p/lib;C:/Users/dimma/.conan2/p/b/md4c566c7dd492496/p/lib/$(Configuration);C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/bin/archdatadir/plugins/platforms;C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/bin/archdatadir/plugins/platforms/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/dimma/Desktop/tiff-fix/build/Debug/HyperspectralViewer.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/dimma/Desktop/tiff-fix/build/Debug/HyperspectralViewer.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer_autogen\include_Release;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer_autogen\include_Release;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer_autogen\include_Release;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Automatic MOC and UIC for target HyperspectralViewer</Message>
+      <Command>setlocal
+cd C:\Users\dimma\Desktop\tiff-fix\build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/dimma/Desktop/tiff-fix/build/CMakeFiles/HyperspectralViewer_autogen.dir/AutogenInfo.json Release
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Link>
+      <AdditionalDependencies>_deps\libtiff-build\libtiff\Release\tiff.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/dimma/Desktop/tiff-fix/build/Release/HyperspectralViewer.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/dimma/Desktop/tiff-fix/build/Release/HyperspectralViewer.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer_autogen\include_MinSizeRel;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer_autogen\include_MinSizeRel;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer_autogen\include_MinSizeRel;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Automatic MOC and UIC for target HyperspectralViewer</Message>
+      <Command>setlocal
+cd C:\Users\dimma\Desktop\tiff-fix\build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/dimma/Desktop/tiff-fix/build/CMakeFiles/HyperspectralViewer_autogen.dir/AutogenInfo.json MinSizeRel
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Link>
+      <AdditionalDependencies>_deps\libtiff-build\libtiff\MinSizeRel\tiff.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/dimma/Desktop/tiff-fix/build/MinSizeRel/HyperspectralViewer.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/dimma/Desktop/tiff-fix/build/MinSizeRel/HyperspectralViewer.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer_autogen\include_RelWithDebInfo;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer_autogen\include_RelWithDebInfo;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer_autogen\include_RelWithDebInfo;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-src\libtiff;C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PreBuildEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message>Automatic MOC and UIC for target HyperspectralViewer</Message>
+      <Command>setlocal
+cd C:\Users\dimma\Desktop\tiff-fix\build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen C:/Users/dimma/Desktop/tiff-fix/build/CMakeFiles/HyperspectralViewer_autogen.dir/AutogenInfo.json RelWithDebInfo
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PreBuildEvent>
+    <Link>
+      <AdditionalDependencies>_deps\libtiff-build\libtiff\RelWithDebInfo\tiff.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/dimma/Desktop/tiff-fix/build/RelWithDebInfo/HyperspectralViewer.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/dimma/Desktop/tiff-fix/build/RelWithDebInfo/HyperspectralViewer.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\dimma\Desktop\tiff-fix\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/dimma/Desktop/tiff-fix/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dimma/Desktop/tiff-fix -BC:/Users/dimma/Desktop/tiff-fix/build --check-stamp-file C:/Users/dimma/Desktop/tiff-fix/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake;C:\Users\dimma\.conan2\p\b\bzip2905a0710ab0f8\p\lib\cmake\conan-official-bzip2-variables.cmake;C:\Users\dimma\.conan2\p\b\freetc237b76632301\p\lib\cmake\conan-official-freetype-variables.cmake;C:\Users\dimma\.conan2\p\b\opena83fb3dbf21cca\p\lib\cmake\conan-official-openal-soft-variables.cmake;C:\Users\dimma\.conan2\p\b\opensec738de4a000f\p\lib\cmake\conan-official-openssl-variables.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Core\conan_qt_core_extras.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Core\conan_qt_qt5_coreprivate.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Gui\conan_qt_qt5_guiprivate.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsMacros.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Qml\conan_qt_qt5_qmlprivate.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Widgets\conan_qt_qt5_widgetsprivate.cmake;C:\Users\dimma\Desktop\tiff-fix\build\BZip2-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\BZip2-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\BZip2Config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\BZip2ConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\BZip2Targets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\CMakeFiles\3.29.0-rc1\CMakeCCompiler.cmake;C:\Users\dimma\Desktop\tiff-fix\build\CMakeFiles\3.29.0-rc1\CMakeCXXCompiler.cmake;C:\Users\dimma\Desktop\tiff-fix\build\CMakeFiles\3.29.0-rc1\CMakeRCCompiler.cmake;C:\Users\dimma\Desktop\tiff-fix\build\CMakeFiles\3.29.0-rc1\CMakeSystem.cmake;C:\Users\dimma\Desktop\tiff-fix\build\JPEG-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\JPEG-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\JPEGConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\JPEGConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\JPEGTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenAL-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenAL-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenALConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenALConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenALTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenSSL-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenSSL-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenSSLConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenSSLConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenSSLTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PCRE2-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PCRE2-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PCRE2Config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PCRE2ConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PCRE2Targets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PNG-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PNG-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PNGConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PNGConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PNGTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PostgreSQL-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PostgreSQL-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PostgreSQLConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PostgreSQLConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PostgreSQLTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\Qt5-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\Qt5-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\Qt5Config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\Qt5ConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\Qt5Targets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\SQLite3-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\SQLite3-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\SQLite3Config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\SQLite3ConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\SQLite3Targets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\ZLIB-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\ZLIB-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\ZLIBConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\ZLIBConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\ZLIBTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\brotli-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\brotli-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\brotli-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\brotli-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\brotliTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\cmakedeps_macros.cmake;C:\Users\dimma\Desktop\tiff-fix\build\double-conversion-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\double-conversion-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\double-conversion-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\double-conversion-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\double-conversionTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\freetype-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\freetype-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\freetype-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\freetype-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\freetypeTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\md4c-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\md4c-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\md4c-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\md4c-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\md4cTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\opengl_system-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\opengl_system-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\opengl_system-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\opengl_system-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\opengl_systemTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\zstd-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\zstd-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\zstd-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\zstd-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\zstdTargets.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\dimma\Desktop\tiff-fix\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/dimma/Desktop/tiff-fix/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dimma/Desktop/tiff-fix -BC:/Users/dimma/Desktop/tiff-fix/build --check-stamp-file C:/Users/dimma/Desktop/tiff-fix/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake;C:\Users\dimma\.conan2\p\b\bzip2905a0710ab0f8\p\lib\cmake\conan-official-bzip2-variables.cmake;C:\Users\dimma\.conan2\p\b\freetc237b76632301\p\lib\cmake\conan-official-freetype-variables.cmake;C:\Users\dimma\.conan2\p\b\opena83fb3dbf21cca\p\lib\cmake\conan-official-openal-soft-variables.cmake;C:\Users\dimma\.conan2\p\b\opensec738de4a000f\p\lib\cmake\conan-official-openssl-variables.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Core\conan_qt_core_extras.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Core\conan_qt_qt5_coreprivate.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Gui\conan_qt_qt5_guiprivate.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsMacros.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Qml\conan_qt_qt5_qmlprivate.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Widgets\conan_qt_qt5_widgetsprivate.cmake;C:\Users\dimma\Desktop\tiff-fix\build\BZip2-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\BZip2-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\BZip2Config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\BZip2ConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\BZip2Targets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\CMakeFiles\3.29.0-rc1\CMakeCCompiler.cmake;C:\Users\dimma\Desktop\tiff-fix\build\CMakeFiles\3.29.0-rc1\CMakeCXXCompiler.cmake;C:\Users\dimma\Desktop\tiff-fix\build\CMakeFiles\3.29.0-rc1\CMakeRCCompiler.cmake;C:\Users\dimma\Desktop\tiff-fix\build\CMakeFiles\3.29.0-rc1\CMakeSystem.cmake;C:\Users\dimma\Desktop\tiff-fix\build\JPEG-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\JPEG-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\JPEGConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\JPEGConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\JPEGTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenAL-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenAL-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenALConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenALConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenALTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenSSL-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenSSL-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenSSLConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenSSLConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenSSLTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PCRE2-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PCRE2-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PCRE2Config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PCRE2ConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PCRE2Targets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PNG-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PNG-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PNGConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PNGConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PNGTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PostgreSQL-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PostgreSQL-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PostgreSQLConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PostgreSQLConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PostgreSQLTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\Qt5-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\Qt5-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\Qt5Config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\Qt5ConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\Qt5Targets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\SQLite3-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\SQLite3-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\SQLite3Config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\SQLite3ConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\SQLite3Targets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\ZLIB-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\ZLIB-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\ZLIBConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\ZLIBConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\ZLIBTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\brotli-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\brotli-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\brotli-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\brotli-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\brotliTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\cmakedeps_macros.cmake;C:\Users\dimma\Desktop\tiff-fix\build\double-conversion-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\double-conversion-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\double-conversion-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\double-conversion-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\double-conversionTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\freetype-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\freetype-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\freetype-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\freetype-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\freetypeTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\md4c-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\md4c-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\md4c-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\md4c-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\md4cTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\opengl_system-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\opengl_system-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\opengl_system-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\opengl_system-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\opengl_systemTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\zstd-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\zstd-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\zstd-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\zstd-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\zstdTargets.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\dimma\Desktop\tiff-fix\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/dimma/Desktop/tiff-fix/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dimma/Desktop/tiff-fix -BC:/Users/dimma/Desktop/tiff-fix/build --check-stamp-file C:/Users/dimma/Desktop/tiff-fix/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake;C:\Users\dimma\.conan2\p\b\bzip2905a0710ab0f8\p\lib\cmake\conan-official-bzip2-variables.cmake;C:\Users\dimma\.conan2\p\b\freetc237b76632301\p\lib\cmake\conan-official-freetype-variables.cmake;C:\Users\dimma\.conan2\p\b\opena83fb3dbf21cca\p\lib\cmake\conan-official-openal-soft-variables.cmake;C:\Users\dimma\.conan2\p\b\opensec738de4a000f\p\lib\cmake\conan-official-openssl-variables.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Core\conan_qt_core_extras.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Core\conan_qt_qt5_coreprivate.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Gui\conan_qt_qt5_guiprivate.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsMacros.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Qml\conan_qt_qt5_qmlprivate.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Widgets\conan_qt_qt5_widgetsprivate.cmake;C:\Users\dimma\Desktop\tiff-fix\build\BZip2-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\BZip2-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\BZip2Config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\BZip2ConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\BZip2Targets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\CMakeFiles\3.29.0-rc1\CMakeCCompiler.cmake;C:\Users\dimma\Desktop\tiff-fix\build\CMakeFiles\3.29.0-rc1\CMakeCXXCompiler.cmake;C:\Users\dimma\Desktop\tiff-fix\build\CMakeFiles\3.29.0-rc1\CMakeRCCompiler.cmake;C:\Users\dimma\Desktop\tiff-fix\build\CMakeFiles\3.29.0-rc1\CMakeSystem.cmake;C:\Users\dimma\Desktop\tiff-fix\build\JPEG-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\JPEG-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\JPEGConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\JPEGConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\JPEGTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenAL-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenAL-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenALConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenALConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenALTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenSSL-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenSSL-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenSSLConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenSSLConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenSSLTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PCRE2-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PCRE2-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PCRE2Config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PCRE2ConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PCRE2Targets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PNG-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PNG-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PNGConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PNGConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PNGTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PostgreSQL-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PostgreSQL-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PostgreSQLConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PostgreSQLConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PostgreSQLTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\Qt5-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\Qt5-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\Qt5Config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\Qt5ConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\Qt5Targets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\SQLite3-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\SQLite3-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\SQLite3Config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\SQLite3ConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\SQLite3Targets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\ZLIB-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\ZLIB-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\ZLIBConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\ZLIBConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\ZLIBTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\brotli-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\brotli-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\brotli-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\brotli-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\brotliTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\cmakedeps_macros.cmake;C:\Users\dimma\Desktop\tiff-fix\build\double-conversion-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\double-conversion-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\double-conversion-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\double-conversion-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\double-conversionTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\freetype-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\freetype-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\freetype-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\freetype-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\freetypeTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\md4c-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\md4c-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\md4c-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\md4c-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\md4cTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\opengl_system-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\opengl_system-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\opengl_system-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\opengl_system-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\opengl_systemTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\zstd-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\zstd-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\zstd-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\zstd-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\zstdTargets.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\dimma\Desktop\tiff-fix\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/dimma/Desktop/tiff-fix/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/dimma/Desktop/tiff-fix -BC:/Users/dimma/Desktop/tiff-fix/build --check-stamp-file C:/Users/dimma/Desktop/tiff-fix/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeFindDependencyMacro.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake;C:\Users\dimma\.conan2\p\b\bzip2905a0710ab0f8\p\lib\cmake\conan-official-bzip2-variables.cmake;C:\Users\dimma\.conan2\p\b\freetc237b76632301\p\lib\cmake\conan-official-freetype-variables.cmake;C:\Users\dimma\.conan2\p\b\opena83fb3dbf21cca\p\lib\cmake\conan-official-openal-soft-variables.cmake;C:\Users\dimma\.conan2\p\b\opensec738de4a000f\p\lib\cmake\conan-official-openssl-variables.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Core\Qt5CoreMacros.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Core\conan_qt_core_extras.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Core\conan_qt_qt5_coreprivate.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Gui\conan_qt_qt5_guiprivate.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5LinguistTools\Qt5LinguistToolsMacros.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Qml\conan_qt_qt5_qmlprivate.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Widgets\Qt5WidgetsMacros.cmake;C:\Users\dimma\.conan2\p\b\qt526c543da2888\p\lib\cmake\Qt5Widgets\conan_qt_qt5_widgetsprivate.cmake;C:\Users\dimma\Desktop\tiff-fix\build\BZip2-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\BZip2-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\BZip2Config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\BZip2ConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\BZip2Targets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\CMakeFiles\3.29.0-rc1\CMakeCCompiler.cmake;C:\Users\dimma\Desktop\tiff-fix\build\CMakeFiles\3.29.0-rc1\CMakeCXXCompiler.cmake;C:\Users\dimma\Desktop\tiff-fix\build\CMakeFiles\3.29.0-rc1\CMakeRCCompiler.cmake;C:\Users\dimma\Desktop\tiff-fix\build\CMakeFiles\3.29.0-rc1\CMakeSystem.cmake;C:\Users\dimma\Desktop\tiff-fix\build\JPEG-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\JPEG-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\JPEGConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\JPEGConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\JPEGTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenAL-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenAL-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenALConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenALConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenALTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenSSL-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenSSL-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenSSLConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenSSLConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\OpenSSLTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PCRE2-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PCRE2-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PCRE2Config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PCRE2ConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PCRE2Targets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PNG-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PNG-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PNGConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PNGConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PNGTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PostgreSQL-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PostgreSQL-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PostgreSQLConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PostgreSQLConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\PostgreSQLTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\Qt5-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\Qt5-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\Qt5Config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\Qt5ConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\Qt5Targets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\SQLite3-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\SQLite3-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\SQLite3Config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\SQLite3ConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\SQLite3Targets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\ZLIB-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\ZLIB-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\ZLIBConfig.cmake;C:\Users\dimma\Desktop\tiff-fix\build\ZLIBConfigVersion.cmake;C:\Users\dimma\Desktop\tiff-fix\build\ZLIBTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\brotli-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\brotli-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\brotli-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\brotli-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\brotliTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\cmakedeps_macros.cmake;C:\Users\dimma\Desktop\tiff-fix\build\double-conversion-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\double-conversion-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\double-conversion-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\double-conversion-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\double-conversionTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\freetype-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\freetype-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\freetype-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\freetype-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\freetypeTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\md4c-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\md4c-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\md4c-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\md4c-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\md4cTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\opengl_system-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\opengl_system-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\opengl_system-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\opengl_system-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\opengl_systemTargets.cmake;C:\Users\dimma\Desktop\tiff-fix\build\zstd-Target-debug.cmake;C:\Users\dimma\Desktop\tiff-fix\build\zstd-config-version.cmake;C:\Users\dimma\Desktop\tiff-fix\build\zstd-config.cmake;C:\Users\dimma\Desktop\tiff-fix\build\zstd-debug-x86_64-data.cmake;C:\Users\dimma\Desktop\tiff-fix\build\zstdTargets.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\dimma\Desktop\tiff-fix\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer_autogen\mocs_compilation_Debug.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\main.cpp" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\main_window.cpp" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\tiff_reader.cpp" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\hyperspectral_image.cpp" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\histogram_widget.cpp" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\dialogs.cpp" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\spectral_reader.cpp" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\spectral_info_dialog.cpp" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\image_label.cpp" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\spectral_curve_dialog.cpp" />
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\main_window.h" />
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\tiff_reader.h" />
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\hyperspectral_image.h" />
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\histogram_widget.h" />
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\spectral_reader.h" />
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\spectral_info_dialog.h" />
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\dialogs.h" />
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\image_label.h" />
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\spectral_curve_dialog.h" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer_autogen\mocs_compilation_Release.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer_autogen\mocs_compilation_MinSizeRel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\ZERO_CHECK.vcxproj">
+      <Project>{DD68F2B4-9773-31F9-8AFB-592AAC5B286B}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\_deps\libtiff-build\libtiff\tiff.vcxproj">
+      <Project>{7695F332-CA9B-3B2F-825A-55537FB2A5E4}</Project>
+      <Name>tiff</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

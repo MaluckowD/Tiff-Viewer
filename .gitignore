@@ -1,0 +1,63 @@
+# ---- Qt / C++ project .gitignore ----
+
+# Build directories
+build/
+!build/**/*.exe   # исключаем из игнора только exe-файлы
+
+# Qt Creator specific
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.creator.*
+*.autosave
+
+# Compiled Object files
+*.o
+*.obj
+*.lo
+*.la
+*.al
+*.libs
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Qt-generated files
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+*.moc
+Makefile*
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+*.cmake
+cmake_install.cmake
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# OS-specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE specific
+.vscode/
+.idea/
+
+# ---- End of file ----
