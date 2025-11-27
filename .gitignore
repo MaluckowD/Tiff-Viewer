@@ -2,7 +2,7 @@
 
 # Build directories
 build/
-!build/**/*.exe   # исключаем из игнора только exe-файлы
+!build/**/*.exe   # исключаем из игнора только exe-файлы внутри build
 
 # Qt Creator specific
 *.pro.user
@@ -30,7 +30,7 @@ build/
 *.lib
 
 # Executables
-*.exe
+# Исключаем exe только вне папки build
 *.out
 *.app
 

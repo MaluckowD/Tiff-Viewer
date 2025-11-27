@@ -4,7 +4,7 @@
 #include <algorithm>
 
 HistogramWidget::HistogramWidget(QWidget *parent) : QWidget(parent) {
-    setMinimumSize(700, 500);
+    setMinimumSize(700, 350);
     channel = 0;
     displayMode = GRAYSCALE;
     rgbChannel = RED_CHANNEL;
@@ -15,6 +15,12 @@ void HistogramWidget::setHistogramData16bit(const std::vector<int>& hist, int ch
     histogram16bit = hist;
     channel = channelIndex;
     is16bit = true;
+    
+    if (!isZoomed) {
+        calculateInformativeRange(hist, zoomMinValue, zoomMaxValue);
+        isZoomed = true;
+    }
+    
     update();
 }
 
@@ -53,6 +59,12 @@ void HistogramWidget::resetZoom() {
     zoomMaxValue = 65535;
     zoomMinCount = 0;
     zoomMaxCount = 0;
+    
+    if (!histogram16bit.empty()) {
+        calculateInformativeRange(histogram16bit, zoomMinValue, zoomMaxValue);
+        isZoomed = true;
+    }
+    
     update();
 }
 
@@ -77,7 +89,19 @@ void HistogramWidget::mousePressEvent(QMouseEvent *event) {
 
 void HistogramWidget::mouseMoveEvent(QMouseEvent *event) {
     if (isSelecting) {
-        selectionEnd = event->pos();
+        const int leftMargin = 80;
+        const int rightMargin = 50;
+        const int topMargin = 70;
+        const int bottomMargin = 90;
+        const int plotWidth = width() - leftMargin - rightMargin;
+        const int plotHeight = height() - topMargin - bottomMargin;
+        
+        QRect plotRect(leftMargin, topMargin, plotWidth, plotHeight);
+        
+        int x = std::max(plotRect.left(), std::min(event->pos().x(), plotRect.right()));
+        int y = std::max(plotRect.top(), std::min(event->pos().y(), plotRect.bottom()));
+        
+        selectionEnd = QPoint(x, y);
         update();
     }
 }
@@ -93,52 +117,53 @@ void HistogramWidget::mouseReleaseEvent(QMouseEvent *event) {
         const int plotWidth = width() - leftMargin - rightMargin;
         const int plotHeight = height() - topMargin - bottomMargin;
         
-        // Вычисляем выделенную область
         int x1 = std::min(selectionStart.x(), selectionEnd.x()) - leftMargin;
         int x2 = std::max(selectionStart.x(), selectionEnd.x()) - leftMargin;
         int y1 = std::min(selectionStart.y(), selectionEnd.y()) - topMargin;
         int y2 = std::max(selectionStart.y(), selectionEnd.y()) - topMargin;
         
-        // Проверяем что выделение достаточно большое
         if (std::abs(x2 - x1) > 10 && std::abs(y2 - y1) > 10) {
-            // Преобразуем координаты в значения гистограммы
             x1 = std::max(0, x1);
             x2 = std::min(plotWidth, x2);
             y1 = std::max(0, y1);
             y2 = std::min(plotHeight, y2);
             
-            // Вычисляем диапазон значений
             int currentMin = isZoomed ? zoomMinValue : 0;
             int currentMax = isZoomed ? zoomMaxValue : 65535;
             int valueRange = currentMax - currentMin;
             
-            zoomMinValue = currentMin + (x1 * valueRange) / plotWidth;
-            zoomMaxValue = currentMin + (x2 * valueRange) / plotWidth;
+            int newMinValue = currentMin + (x1 * valueRange) / plotWidth;
+            int newMaxValue = currentMin + (x2 * valueRange) / plotWidth;
             
-            // Вычисляем диапазон количества
-            const std::vector<int>* currentHist = nullptr;
-            if (displayMode == GRAYSCALE) {
-                currentHist = &histogram16bit;
-            } else {
-                switch (rgbChannel) {
-                    case RED_CHANNEL: currentHist = &redHistogram; break;
-                    case GREEN_CHANNEL: currentHist = &greenHistogram; break;
-                    case BLUE_CHANNEL: currentHist = &blueHistogram; break;
-                }
-            }
-            
-            if (currentHist && !currentHist->empty()) {
-                // Находим максимум в выделенной области
-                int maxInRange = 0;
-                for (int i = zoomMinValue; i <= zoomMaxValue && i < static_cast<int>(currentHist->size()); i++) {
-                    maxInRange = std::max(maxInRange, (*currentHist)[i]);
+            if (newMaxValue > newMinValue) {
+                zoomMinValue = newMinValue;
+                zoomMaxValue = newMaxValue;
+                
+                const std::vector<int>* currentHist = nullptr;
+                if (displayMode == GRAYSCALE) {
+                    currentHist = &histogram16bit;
+                } else {
+                    switch (rgbChannel) {
+                        case RED_CHANNEL: currentHist = &redHistogram; break;
+                        case GREEN_CHANNEL: currentHist = &greenHistogram; break;
+                        case BLUE_CHANNEL: currentHist = &blueHistogram; break;
+                    }
                 }
                 
-                int currentMaxCount = isZoomed ? zoomMaxCount : maxInRange;
-                zoomMaxCount = currentMaxCount - (y1 * currentMaxCount) / plotHeight;
-                zoomMinCount = currentMaxCount - (y2 * currentMaxCount) / plotHeight;
-                
-                isZoomed = true;
+                if (currentHist && !currentHist->empty()) {
+                    int maxInRange = 0;
+                    for (int i = zoomMinValue; i <= zoomMaxValue && i < static_cast<int>(currentHist->size()); i++) {
+                        maxInRange = std::max(maxInRange, (*currentHist)[i]);
+                    }
+                    
+                    if (maxInRange > 0) {
+                        int currentMaxCount = isZoomed && zoomMaxCount > 0 ? zoomMaxCount : maxInRange;
+                        zoomMaxCount = currentMaxCount - (y1 * currentMaxCount) / plotHeight;
+                        zoomMinCount = currentMaxCount - (y2 * currentMaxCount) / plotHeight;
+                        
+                        isZoomed = true;
+                    }
+                }
             }
         }
         
@@ -185,6 +210,11 @@ void HistogramWidget::drawGrayscaleHistogram(QPainter& painter, int leftMargin, 
     int minValue = isZoomed ? zoomMinValue : 0;
     int maxValue = isZoomed ? zoomMaxValue : 65535;
     
+    if (minValue >= maxValue) {
+        minValue = 0;
+        maxValue = 65535;
+    }
+    
     int maxCount = 0;
     for (int i = minValue; i <= maxValue && i < static_cast<int>(histogram16bit.size()); i++) {
         maxCount = std::max(maxCount, histogram16bit[i]);
@@ -194,39 +224,37 @@ void HistogramWidget::drawGrayscaleHistogram(QPainter& painter, int leftMargin, 
         maxCount = std::min(maxCount, zoomMaxCount);
     }
     
-    if (maxCount == 0) return;
+    if (maxCount == 0) {
+        maxCount = 1;
+    }
 
-    drawAxes(painter, leftMargin, rightMargin, topMargin, bottomMargin, plotWidth, plotHeight, maxCount);
+    drawAxes(painter, leftMargin, rightMargin, topMargin, bottomMargin, plotWidth, plotHeight, maxCount, minValue, maxValue);
     
     painter.setPen(Qt::NoPen);
     painter.setBrush(Qt::darkBlue);
 
-    int binSize = 256;
-    int numBins = (maxValue - minValue) / binSize;
+    int valueRange = maxValue - minValue;
+    int binSize = std::max(1, valueRange / 256);
+    int numBins = valueRange / binSize;
     if (numBins == 0) numBins = 1;
     
     for (int bin = 0; bin < numBins; bin++) {
         int binCount = 0;
         for (int i = 0; i < binSize; i++) {
             int index = minValue + bin * binSize + i;
-            if (index < static_cast<int>(histogram16bit.size())) {
+            if (index >= 0 && index < static_cast<int>(histogram16bit.size())) {
                 binCount += histogram16bit[index];
             }
         }
         
-        if (binCount > 0) {
+        if (binCount > 0 && binCount <= maxCount) {
             float heightRatio = static_cast<float>(binCount) / maxCount;
-            int barHeight = static_cast<int>(heightRatio * plotHeight);
-            barHeight = std::min(barHeight, plotHeight);
+            int barHeight = static_cast<int>(heightRatio * (plotHeight - 5));
+            barHeight = std::min(barHeight, plotHeight - 5);
             
-            int x = leftMargin + bin * (plotWidth / numBins);
+            int x = leftMargin + bin * plotWidth / numBins;
             int y = topMargin + plotHeight - barHeight;
             int barWidth = std::max(1, plotWidth / numBins);
-            
-            if (y < topMargin) {
-                barHeight = plotHeight;
-                y = topMargin;
-            }
             
             painter.drawRect(x, y, barWidth, barHeight);
         }
@@ -288,6 +316,11 @@ void HistogramWidget::drawRGBHistogram(QPainter& painter, int leftMargin, int ri
     int minValue = isZoomed ? zoomMinValue : 0;
     int maxValue = isZoomed ? zoomMaxValue : 65535;
     
+    if (minValue >= maxValue) {
+        minValue = 0;
+        maxValue = 65535;
+    }
+    
     int maxCount = 0;
     for (int i = minValue; i <= maxValue && i < static_cast<int>(currentHist->size()); i++) {
         maxCount = std::max(maxCount, (*currentHist)[i]);
@@ -297,39 +330,37 @@ void HistogramWidget::drawRGBHistogram(QPainter& painter, int leftMargin, int ri
         maxCount = std::min(maxCount, zoomMaxCount);
     }
     
-    if (maxCount == 0) return;
+    if (maxCount == 0) {
+        maxCount = 1;
+    }
 
-    drawAxes(painter, leftMargin, rightMargin, topMargin, bottomMargin, plotWidth, plotHeight, maxCount);
+    drawAxes(painter, leftMargin, rightMargin, topMargin, bottomMargin, plotWidth, plotHeight, maxCount, minValue, maxValue);
     
     painter.setPen(Qt::NoPen);
     painter.setBrush(histColor);
 
-    int binSize = 256;
-    int numBins = (maxValue - minValue) / binSize;
+    int valueRange = maxValue - minValue;
+    int binSize = std::max(1, valueRange / 256);
+    int numBins = valueRange / binSize;
     if (numBins == 0) numBins = 1;
     
     for (int bin = 0; bin < numBins; bin++) {
         int binCount = 0;
         for (int i = 0; i < binSize; i++) {
             int index = minValue + bin * binSize + i;
-            if (index < static_cast<int>(currentHist->size())) {
+            if (index >= 0 && index < static_cast<int>(currentHist->size())) {
                 binCount += (*currentHist)[index];
             }
         }
         
-        if (binCount > 0) {
+        if (binCount > 0 && binCount <= maxCount) {
             float heightRatio = static_cast<float>(binCount) / maxCount;
-            int barHeight = static_cast<int>(heightRatio * plotHeight);
-            barHeight = std::min(barHeight, plotHeight);
+            int barHeight = static_cast<int>(heightRatio * (plotHeight - 5));
+            barHeight = std::min(barHeight, plotHeight - 5);
             
-            int x = leftMargin + bin * (plotWidth / numBins);
+            int x = leftMargin + bin * plotWidth / numBins;
             int y = topMargin + plotHeight - barHeight;
             int barWidth = std::max(1, plotWidth / numBins);
-            
-            if (y < topMargin) {
-                barHeight = plotHeight;
-                y = topMargin;
-            }
             
             painter.drawRect(x, y, barWidth, barHeight);
         }
@@ -356,13 +387,12 @@ void HistogramWidget::drawRGBHistogram(QPainter& painter, int leftMargin, int ri
     painter.drawText(rightEdge - maxWidth - 10, 50, maxText);
 }
 
-void HistogramWidget::drawAxes(QPainter& painter, int leftMargin, int rightMargin, int topMargin, int bottomMargin, int plotWidth, int plotHeight, int maxCount) {
+void HistogramWidget::drawAxes(QPainter& painter, int leftMargin, int rightMargin, int topMargin, int bottomMargin, int plotWidth, int plotHeight, int maxCount, int minVal, int maxVal) {
     QFont axisFont = painter.font();
     axisFont.setPixelSize(11);
     painter.setFont(axisFont);
     painter.setPen(Qt::black);
 
-    // Рисуем основные оси
     painter.drawLine(leftMargin, topMargin + plotHeight, leftMargin + plotWidth, topMargin + plotHeight); // X axis
     painter.drawLine(leftMargin, topMargin, leftMargin, topMargin + plotHeight); // Y axis
 
@@ -371,7 +401,6 @@ void HistogramWidget::drawAxes(QPainter& painter, int leftMargin, int rightMargi
     titleFont.setBold(true);
     painter.setFont(titleFont);
     
-    // Подписи осей
     painter.save();
     painter.translate(leftMargin - 70, topMargin + plotHeight/2);
     painter.rotate(-90);
@@ -381,24 +410,22 @@ void HistogramWidget::drawAxes(QPainter& painter, int leftMargin, int rightMargi
     painter.drawText(leftMargin + plotWidth/2 - 100, topMargin + plotHeight + bottomMargin - 25, QString::fromUtf8("16-битные значения (0-65535)"));
     painter.setFont(axisFont);
 
-    // Деления по оси X
-    std::vector<int> xTicks = {0, 8000, 16000, 24000, 32000, 40000, 48000, 56000, 65535};
-    for (int tick : xTicks) {
-        int xPos = leftMargin + (tick * plotWidth) / 65535;
+    int valueRange = maxVal - minVal;
+    int numXTicks = 8;
+    for (int i = 0; i <= numXTicks; i++) {
+        int tickValue = minVal + (valueRange * i) / numXTicks;
+        int xPos = leftMargin + (plotWidth * i) / numXTicks;
         
-        // Рисуем деление
         painter.setPen(Qt::black);
         painter.drawLine(xPos, topMargin + plotHeight, xPos, topMargin + plotHeight + 5);
         
-        // Подпись
         painter.save();
         painter.translate(xPos, topMargin + plotHeight + 30);
         painter.rotate(-45);
-        painter.drawText(QRect(0, 0, 70, 20), Qt::AlignLeft, QString::number(tick));
+        painter.drawText(QRect(0, 0, 70, 20), Qt::AlignLeft, QString::number(tickValue));
         painter.restore();
     }
 
-    // Деления по оси Y
     int ySteps = 5;
     for (int i = 0; i <= ySteps; ++i) {
         int yPos = topMargin + plotHeight - (i * plotHeight / ySteps);
@@ -413,15 +440,44 @@ void HistogramWidget::drawAxes(QPainter& painter, int leftMargin, int rightMargi
             label = QString::number(static_cast<int>(value));
         }
 
-        // Горизонтальная сетка
         painter.setPen(QColor(200, 200, 200));
         painter.drawLine(leftMargin, yPos, leftMargin + plotWidth, yPos);
         
-        // Подпись и деление
         painter.setPen(Qt::black);
         painter.drawText(QRect(10, yPos - 10, leftMargin - 20, 20), 
                         Qt::AlignRight | Qt::AlignVCenter, label);
         
         painter.drawLine(leftMargin - 5, yPos, leftMargin, yPos);
     }
+}
+
+void HistogramWidget::calculateInformativeRange(const std::vector<int>& hist, int& outMin, int& outMax) {
+    if (hist.empty()) {
+        outMin = 0;
+        outMax = 65535;
+        return;
+    }
+    
+    int firstNonZero = 0;
+    int lastNonZero = hist.size() - 1;
+    
+    for (size_t i = 0; i < hist.size(); i++) {
+        if (hist[i] > 0) {
+            firstNonZero = i;
+            break;
+        }
+    }
+    
+    for (int i = hist.size() - 1; i >= 0; i--) {
+        if (hist[i] > 0) {
+            lastNonZero = i;
+            break;
+        }
+    }
+    
+    int range = lastNonZero - firstNonZero;
+    int padding = std::max(100, range / 20);
+    
+    outMin = std::max(0, firstNonZero - padding);
+    outMax = std::min(65535, lastNonZero + padding);
 }

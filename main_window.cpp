@@ -20,11 +20,11 @@
 
 MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent) {
     setWindowTitle("Hyperspectral Image Viewer");
-    resize(1600, 1000);
+    resize(1600, 900);
     
     colorIndex = 0;
     
-    setupUI();
+    createUI();
     createMenus();
     setupStatusBar();
 }
@@ -486,7 +486,7 @@ void MainWindow::onHistogramChannelChanged() {
     }
 }
 
-void MainWindow::setupUI() {
+void MainWindow::createUI() {
     QWidget* centralWidget = new QWidget(this);
     setCentralWidget(centralWidget);
 
@@ -513,7 +513,7 @@ void MainWindow::setupUI() {
 
     autoContrastButton = new QPushButton();
     autoContrastButton->setIcon(style()->standardIcon(QStyle::SP_DialogApplyButton));
-    autoContrastButton->setToolTip("Автоматическое контрастирование (обрезка гистограммы 2%)");
+    autoContrastButton->setToolTip(QString::fromUtf8("Автоматическое контрастирование (обрезка гистограммы 2%)"));
     autoContrastButton->setMinimumSize(35, 30);
     autoContrastButton->setMaximumSize(35, 30);
     autoContrastButton->setEnabled(false);
@@ -547,15 +547,18 @@ void MainWindow::setupUI() {
     QVBoxLayout* rightLayout = new QVBoxLayout();
     
     rightSplitter = new QSplitter(Qt::Vertical);
+    rightSplitter->setMinimumWidth(750);
     
     // Виджет спектральной кривой
     QWidget* spectralWidget = new QWidget();
+    spectralWidget->setStyleSheet("QWidget { background-color: white; }");
     QVBoxLayout* spectralLayout = new QVBoxLayout(spectralWidget);
+    spectralLayout->setContentsMargins(10, 10, 10, 10);
     
     spectralLayout->addStretch(1);
     
-    spectralCurveLabel = new QLabel("Спектральная кривая: кликните на изображении");
-    spectralCurveLabel->setStyleSheet("QLabel { font-weight: bold; padding: 5px; }");
+    spectralCurveLabel = new QLabel(QString::fromUtf8("Спектральная кривая: кликните на изображении"));
+    spectralCurveLabel->setStyleSheet("QLabel { font-weight: bold; padding: 5px; background-color: white; }");
     spectralLayout->addWidget(spectralCurveLabel);
     
     spectralCurveWidget = new SpectralCurveWidget();
@@ -564,16 +567,25 @@ void MainWindow::setupUI() {
     spectralLayout->addWidget(spectralCurveWidget);
     
     QHBoxLayout* pointControlLayout = new QHBoxLayout();
-    addPointButton = new QPushButton("Добавить точку");
-    addPointButton->setToolTip("Закрепить текущую точку на графике");
+    addPointButton = new QPushButton();
+    addPointButton->setIcon(style()->standardIcon(QStyle::SP_FileDialogNewFolder));
+    addPointButton->setToolTip(QString::fromUtf8("Закрепить текущую точку на графике"));
+    addPointButton->setMinimumSize(32, 32);
+    addPointButton->setMaximumSize(32, 32);
     connect(addPointButton, &QPushButton::clicked, this, &MainWindow::onAddPointClicked);
     
-    removePointButton = new QPushButton("Удалить выбранную");
-    removePointButton->setToolTip("Удалить выбранную точку из графика");
+    removePointButton = new QPushButton();
+    removePointButton->setIcon(style()->standardIcon(QStyle::SP_TrashIcon));
+    removePointButton->setToolTip(QString::fromUtf8("Удалить выбранную точку из графика"));
+    removePointButton->setMinimumSize(32, 32);
+    removePointButton->setMaximumSize(32, 32);
     connect(removePointButton, &QPushButton::clicked, this, &MainWindow::onRemovePointClicked);
     
-    clearPointsButton = new QPushButton("Очистить все");
-    clearPointsButton->setToolTip("Удалить все закрепленные точки");
+    clearPointsButton = new QPushButton();
+    clearPointsButton->setIcon(style()->standardIcon(QStyle::SP_DialogDiscardButton));
+    clearPointsButton->setToolTip(QString::fromUtf8("Удалить все закрепленные точки"));
+    clearPointsButton->setMinimumSize(32, 32);
+    clearPointsButton->setMaximumSize(32, 32);
     connect(clearPointsButton, &QPushButton::clicked, this, &MainWindow::onClearPointsClicked);
     
     pointControlLayout->addWidget(addPointButton);
@@ -582,13 +594,14 @@ void MainWindow::setupUI() {
     pointControlLayout->addStretch();
     spectralLayout->addLayout(pointControlLayout);
     
-    QLabel* legendLabel = new QLabel("Закрепленные точки:");
-    legendLabel->setStyleSheet("QLabel { font-weight: bold; padding: 5px; }");
+    QLabel* legendLabel = new QLabel(QString::fromUtf8("Закрепленные точки:"));
+    legendLabel->setStyleSheet("QLabel { font-weight: bold; padding: 5px; background-color: white; }");
     spectralLayout->addWidget(legendLabel);
     
     legendWidget = new QListWidget();
     legendWidget->setMaximumHeight(150);
-    legendWidget->setToolTip("Двойной клик для удаления точки");
+    legendWidget->setToolTip(QString::fromUtf8("Двойной клик для удаления точки"));
+    legendWidget->setStyleSheet("QListWidget { background-color: white; }");
     connect(legendWidget, &QListWidget::itemDoubleClicked, this, &MainWindow::onLegendItemDoubleClicked);
     spectralLayout->addWidget(legendWidget);
     
@@ -596,48 +609,47 @@ void MainWindow::setupUI() {
     
     // Виджет гистограммы
     QWidget* histogramContainer = new QWidget();
+    histogramContainer->setStyleSheet("QWidget { background-color: white; }");
     QVBoxLayout* histogramLayout = new QVBoxLayout(histogramContainer);
+    histogramLayout->setContentsMargins(10, 10, 10, 10);
     
     QHBoxLayout* histControlLayout = new QHBoxLayout();
-    QLabel* histLabel = new QLabel("Гистограмма:");
-    histLabel->setMinimumWidth(100);
-    histControlLayout->addWidget(histLabel);
     
+    QLabel* histChannelLabel = new QLabel(QString::fromUtf8("Канал гистограммы:"));
+    histChannelLabel->setStyleSheet("QLabel { background-color: white; }");
     histogramChannelSelector = new QComboBox();
     histogramChannelSelector->setEnabled(false);
-    histogramChannelSelector->setMinimumWidth(150);
-    histogramChannelSelector->setMinimumHeight(30);
-    
+    histogramChannelSelector->setMinimumWidth(120);
     connect(histogramChannelSelector, QOverload<int>::of(&QComboBox::currentIndexChanged),
             this, &MainWindow::onHistogramChannelChanged);
     
-    histControlLayout->addWidget(histogramChannelSelector);
-    
-    QPushButton* resetZoomButton = new QPushButton("Сбросить масштаб");
-    resetZoomButton->setToolTip("Сбросить масштабирование гистограммы");
-    resetZoomButton->setMinimumHeight(30);
+    QPushButton* resetZoomButton = new QPushButton();
+    resetZoomButton->setIcon(style()->standardIcon(QStyle::SP_BrowserReload));
+    resetZoomButton->setToolTip(QString::fromUtf8("Сбросить масштабирование гистограммы"));
+    resetZoomButton->setMinimumSize(32, 32);
+    resetZoomButton->setMaximumSize(32, 32);
     connect(resetZoomButton, &QPushButton::clicked, [this]() {
-        histogramWidget->resetZoom();
+        if (histogramWidget) {
+            histogramWidget->resetZoom();
+        }
     });
+    
+    histControlLayout->addWidget(histChannelLabel);
+    histControlLayout->addWidget(histogramChannelSelector);
     histControlLayout->addWidget(resetZoomButton);
-    
     histControlLayout->addStretch();
-    
     histogramLayout->addLayout(histControlLayout);
-    
+
     histogramWidget = new HistogramWidget();
-    histogramWidget->setMaximumWidth(750);
-    histogramWidget->setMinimumHeight(400);
+    histogramWidget->setMinimumHeight(350);
+    histogramWidget->setMaximumHeight(400);
     histogramLayout->addWidget(histogramWidget);
     
     rightSplitter->addWidget(histogramContainer);
     
-    rightSplitter->setStretchFactor(0, 1);
-    rightSplitter->setStretchFactor(1, 1);
-    
     rightLayout->addWidget(rightSplitter);
     
-    mainLayout->addLayout(leftLayout, 2);
+    mainLayout->addLayout(leftLayout, 3);
     mainLayout->addLayout(rightLayout, 1);
 }
 

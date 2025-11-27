@@ -49,8 +49,10 @@ private:
     void drawRGBHistogram(QPainter& painter, int leftMargin, int rightMargin, 
                          int topMargin, int bottomMargin, int plotWidth, int plotHeight);
     void drawAxes(QPainter& painter, int leftMargin, int rightMargin, 
-                 int topMargin, int bottomMargin, int plotWidth, int plotHeight, int maxCount);
+                 int topMargin, int bottomMargin, int plotWidth, int plotHeight, 
+                 int maxCount, int minVal = 0, int maxVal = 65535);
     void drawSelectionRect(QPainter& painter);
+    void calculateInformativeRange(const std::vector<int>& hist, int& outMin, int& outMax);
 
     std::vector<int> histogram16bit;
     std::vector<int> redHistogram;
