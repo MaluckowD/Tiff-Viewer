@@ -412,7 +412,6 @@ QVector<QString> CalibrationDialog::findMatchingFiles() {
             double maxLon = *std::max_element(longitudes.begin(), longitudes.end());
             
             if (params.coordinateCount == 1) {
-                // Точка должна попадать в bounding box области изображения
                 double lat = params.coordinates[0].first;
                 double lon = params.coordinates[0].second;
                 coordsMatch = (lat >= minLat && lat <= maxLat && 
