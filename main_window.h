@@ -18,6 +18,7 @@
 #include "hyperspectral_image.h"
 #include "spectral_reader.h"
 #include "spectral_curve_dialog.h"
+#include "calibration_dialog.h"
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -44,9 +45,10 @@ private slots:
     void onRemovePointClicked();
     void onClearPointsClicked();
     void onLegendItemDoubleClicked(QListWidgetItem* item);
+    void openCalibration();
 
 private:
-    void setupUI();
+    void createUI();
     void createMenus();
     void setupStatusBar();
     void loadSpectralData(const QString& tiffFilePath);
@@ -92,6 +94,9 @@ private:
     // Текущая точка для спектральной кривой
     int currentSpectralX = -1;
     int currentSpectralY = -1;
+    
+    // Калибровка
+    CalibrationDialog* calibrationDialog;
 };
 
-#endif // MAIN_WINDOW_H
+#endif

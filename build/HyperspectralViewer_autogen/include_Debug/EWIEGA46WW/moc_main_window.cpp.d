@@ -1,4 +1,5 @@
 C:/Users/dimma/Desktop/tiff-fix/build/HyperspectralViewer_autogen/include_Debug/EWIEGA46WW/moc_main_window.cpp: C:/Users/dimma/Desktop/tiff-fix/main_window.h \
+  C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtCore/QDateTime \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtCore/QPoint \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtCore/QRect \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtCore/QString \
@@ -11,6 +12,7 @@ C:/Users/dimma/Desktop/tiff-fix/build/HyperspectralViewer_autogen/include_Debug/
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtCore/qbasicatomic.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtCore/qbytearray.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtCore/qbytearraylist.h \
+  C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtCore/qcalendar.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtCore/qchar.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtCore/qcompilerdetection.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtCore/qconfig.h \
@@ -18,8 +20,11 @@ C:/Users/dimma/Desktop/tiff-fix/build/HyperspectralViewer_autogen/include_Debug/
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtCore/qcontainertools_impl.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtCore/qcoreevent.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtCore/qdatastream.h \
+  C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtCore/qdatetime.h \
+  C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtCore/qdir.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtCore/qfile.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtCore/qfiledevice.h \
+  C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtCore/qfileinfo.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtCore/qflags.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtCore/qglobal.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtCore/qglobalstatic.h \
@@ -100,6 +105,9 @@ C:/Users/dimma/Desktop/tiff-fix/build/HyperspectralViewer_autogen/include_Debug/
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtGui/qregion.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtGui/qrgb.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtGui/qrgba64.h \
+  C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtGui/qtextcursor.h \
+  C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtGui/qtextdocument.h \
+  C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtGui/qtextformat.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtGui/qtextoption.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtGui/qtgui-config.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtGui/qtguiglobal.h \
@@ -111,18 +119,25 @@ C:/Users/dimma/Desktop/tiff-fix/build/HyperspectralViewer_autogen/include_Debug/
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtGui/qwindowdefs_win.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/QAction \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/QComboBox \
+  C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/QDateTimeEdit \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/QDialog \
+  C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/QFileDialog \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/QFrame \
+  C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/QGridLayout \
+  C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/QGroupBox \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/QHBoxLayout \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/QLabel \
+  C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/QLineEdit \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/QListWidget \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/QMainWindow \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/QMenu \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/QMenuBar \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/QPushButton \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/QScrollArea \
+  C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/QSpinBox \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/QSplitter \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/QStatusBar \
+  C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/QTextEdit \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/QVBoxLayout \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/QWidget \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qabstractbutton.h \
@@ -135,12 +150,16 @@ C:/Users/dimma/Desktop/tiff-fix/build/HyperspectralViewer_autogen/include_Debug/
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qactiongroup.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qboxlayout.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qcombobox.h \
+  C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qdatetimeedit.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qdialog.h \
+  C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qfiledialog.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qframe.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qgridlayout.h \
+  C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qgroupbox.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qlabel.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qlayout.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qlayoutitem.h \
+  C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qlineedit.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qlistview.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qlistwidget.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qmainwindow.h \
@@ -151,15 +170,18 @@ C:/Users/dimma/Desktop/tiff-fix/build/HyperspectralViewer_autogen/include_Debug/
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qscrollarea.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qsizepolicy.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qslider.h \
+  C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qspinbox.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qsplitter.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qstatusbar.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qstyle.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qstyleoption.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qtabbar.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qtabwidget.h \
+  C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qtextedit.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qtwidgets-config.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qtwidgetsglobal.h \
   C:/Users/dimma/.conan2/p/b/qt526c543da2888/p/include/QtWidgets/qwidget.h \
+  C:/Users/dimma/Desktop/tiff-fix/calibration_dialog.h \
   C:/Users/dimma/Desktop/tiff-fix/histogram_widget.h \
   C:/Users/dimma/Desktop/tiff-fix/hyperspectral_image.h \
   C:/Users/dimma/Desktop/tiff-fix/image_label.h \

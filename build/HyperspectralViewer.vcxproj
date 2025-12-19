@@ -403,6 +403,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\spectral_info_dialog.cpp" />
     <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\image_label.cpp" />
     <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\spectral_curve_dialog.cpp" />
+    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\calibration_dialog.cpp" />
     <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\main_window.h" />
     <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\tiff_reader.h" />
     <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\hyperspectral_image.h" />
@@ -412,6 +413,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\dialogs.h" />
     <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\image_label.h" />
     <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\spectral_curve_dialog.h" />
+    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\calibration_dialog.h" />
     <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer_autogen\mocs_compilation_Release.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</ExcludedFromBuild>
