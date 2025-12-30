@@ -173,6 +173,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\calibration_module\CalibrationModule.vcxproj">
+      <Project>{3321E714-EFE1-3755-A426-9EF45488990F}</Project>
+      <Name>CalibrationModule</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer.vcxproj">
       <Project>{427BD9D7-9DDF-3A0D-B168-2ED026746B5B}</Project>
       <Name>HyperspectralViewer</Name>

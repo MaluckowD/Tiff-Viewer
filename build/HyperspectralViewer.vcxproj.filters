@@ -34,9 +34,6 @@
     <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\spectral_curve_dialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\calibration_dialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="C:\Users\dimma\Desktop\tiff-fix\build\HyperspectralViewer_autogen\mocs_compilation_Release.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -73,9 +70,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\spectral_curve_dialog.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="C:\Users\dimma\Desktop\tiff-fix\calibration_dialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

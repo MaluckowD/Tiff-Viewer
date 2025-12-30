@@ -13,18 +13,22 @@
 #include <QPushButton>
 #include <QSplitter>
 #include <QListWidget>
+#include <QLibrary>
 #include "image_label.h"
 #include "histogram_widget.h"
 #include "hyperspectral_image.h"
 #include "spectral_reader.h"
 #include "spectral_curve_dialog.h"
-#include "calibration_dialog.h"
+
+// Объявление типа функции из DLL
+typedef void (*ShowCalibrationDialogFunc)(QWidget*);
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
 
 public:
     MainWindow(QWidget* parent = nullptr);
+    ~MainWindow();
 
 private slots:
     void openFile();
@@ -56,14 +60,15 @@ private:
     void updateSpectralCurveForMousePosition(int x, int y);
     void updateLegend();
     QColor getNextColor();
+    void loadCalibrationModule();  // Загрузка DLL
 
+    // UI элементы
     ImageLabel* imageLabel;
     QScrollArea* scrollArea;
     QComboBox* channelSelector;
     QComboBox* histogramChannelSelector;
     QStatusBar* statusBar;
     HistogramWidget* histogramWidget;
-    HyperspectralImage hyperspectralImage;
     QPushButton* autoContrastButton;
     
     // Встроенный виджет спектральных кривых
@@ -77,7 +82,10 @@ private:
     QPushButton* clearPointsButton;
     int colorIndex;
     
-    // RGB режим
+    // Изображение
+    HyperspectralImage hyperspectralImage;
+    
+    // Режимы
     bool isRGBMode = false;
     int currentRedChannel = 0;
     int currentGreenChannel = 0;
@@ -95,8 +103,9 @@ private:
     int currentSpectralX = -1;
     int currentSpectralY = -1;
     
-    // Калибровка
-    CalibrationDialog* calibrationDialog;
+    // Калибровка (DLL)
+    QLibrary* calibrationModule;
+    ShowCalibrationDialogFunc showCalibrationDialogFunc;
 };
 
-#endif
+#endif // MAIN_WINDOW_H

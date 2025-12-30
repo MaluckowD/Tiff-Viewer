@@ -17,16 +17,30 @@
 #include "spectral_reader.h"
 #include "spectral_info_dialog.h"
 #include "spectral_curve_dialog.h"
+#include "./calibration_module/calibration_dialog.h"
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent) {
     setWindowTitle("Hyperspectral Image Viewer");
     resize(1600, 900);
     
     colorIndex = 0;
+    calibrationModule = nullptr;
+    showCalibrationDialogFunc = nullptr;
     
     createUI();
     createMenus();
     setupStatusBar();
+    
+    // Загружаем модуль калибровки
+    loadCalibrationModule();
+}
+
+MainWindow::~MainWindow() {
+    if (calibrationModule) {
+        calibrationModule->unload();
+        delete calibrationModule;
+    }
 }
 
 void MainWindow::openFile() {
@@ -46,7 +60,6 @@ void MainWindow::openFile() {
         channelSelector->addItem(channelName);
     }
 
-    // Заполняем список каналов для гистограммы
     histogramChannelSelector->clear();
     for (int i = 0; i < hyperspectralImage.getNumChannels(); i++) {
         QString channelName = QString("Канал %1").arg(i + 1);
@@ -89,6 +102,7 @@ void MainWindow::openFile() {
     currentSpectralY = -1;
 }
 
+
 void MainWindow::loadSpectralData(const QString& tiffFilePath) {
     QFileInfo tiffInfo(tiffFilePath);
     QString baseName = tiffInfo.completeBaseName();
@@ -122,7 +136,6 @@ void MainWindow::loadSpectralData(const QString& tiffFilePath) {
     }
     
     if (!foundSpectralFile.isEmpty()) {
-        // Найден файл спектральных данных - загружаем автоматически
         QVector<SpectralBand> loadedBands;
         bool success = false;
         
@@ -202,6 +215,7 @@ void MainWindow::showSpectralCurve(int x, int y) {
     currentSpectralY = y;
     updateSpectralCurve();
 }
+
 
 void MainWindow::updateSpectralCurve() {
     if (currentSpectralX < 0 || currentSpectralY < 0 || hyperspectralImage.getNumChannels() == 0) {
@@ -292,6 +306,7 @@ void MainWindow::displayChannel(int channelIndex) {
     
     updateHistogram();
 }
+
 
 void MainWindow::updateHistogram() {
     if (hyperspectralImage.getNumChannels() == 0) return;
@@ -396,6 +411,7 @@ void MainWindow::onContrastChanged() {
         updateSpectralCurve();
     }
 }
+
 
 void MainWindow::closeImage() {
     imageLabel->clear();
@@ -506,6 +522,7 @@ void MainWindow::createUI() {
     connect(channelSelector, QOverload<int>::of(&QComboBox::currentIndexChanged),
             this, &MainWindow::displayChannel);
 
+
     QPushButton* contrastButton = new QPushButton("Контрастирование");
     contrastButton->setMinimumHeight(30);
     contrastButton->setMinimumWidth(150);
@@ -591,6 +608,8 @@ void MainWindow::createUI() {
     pointControlLayout->addWidget(addPointButton);
     pointControlLayout->addWidget(removePointButton);
     pointControlLayout->addWidget(clearPointsButton);
+
+
     pointControlLayout->addStretch();
     spectralLayout->addLayout(pointControlLayout);
     
@@ -672,10 +691,16 @@ void MainWindow::createMenus() {
     connect(contrastAction, &QAction::triggered, this, &MainWindow::openContrastDialog);
     viewMenu->addAction(contrastAction);
 
+
     viewMenu->addSeparator();
     QAction* spectralInfoAction = new QAction("&Спектральная информация", this);
     connect(spectralInfoAction, &QAction::triggered, this, &MainWindow::openSpectralInfo);
     viewMenu->addAction(spectralInfoAction);
+    
+    QMenu* processingMenu = menuBar()->addMenu("&Обработка");
+    QAction* calibrationAction = new QAction("&Калибровка", this);
+    connect(calibrationAction, &QAction::triggered, this, &MainWindow::openCalibration);
+    processingMenu->addAction(calibrationAction);
 }
 
 void MainWindow::setupStatusBar() {
@@ -749,6 +774,7 @@ void MainWindow::openSpectralInfo() {
     dialog.exec();
 }
 
+
 void MainWindow::updateSpectralCurveForMousePosition(int x, int y) {
     if (hyperspectralImage.getNumChannels() == 0) return;
     
@@ -810,6 +836,7 @@ void MainWindow::updateSpectralCurveForMousePosition(int x, int y) {
     spectralCurveLabel->setText(QString("Спектральная кривая точки (%1, %2)")
                                .arg(x).arg(y));
 }
+
 
 void MainWindow::onAddPointClicked() {
     if (currentSpectralX < 0 || currentSpectralY < 0 || hyperspectralImage.getNumChannels() == 0) {
@@ -923,4 +950,92 @@ QColor MainWindow::getNextColor() {
     QColor color = colors[colorIndex % 8];
     colorIndex++;
     return color;
+}
+
+
+void MainWindow::loadCalibrationModule() {
+    // Ищем DLL в разных местах
+    QStringList possiblePaths;
+    
+    // 1. Текущая директория
+    possiblePaths << "CalibrationModule.dll";
+    
+    // 2. Директория с исполняемым файлом
+    QString appDir = QApplication::applicationDirPath();
+    possiblePaths << appDir + "/CalibrationModule.dll";
+    
+    // 3. Поддиректории
+    possiblePaths << appDir + "/Debug/CalibrationModule.dll";
+    possiblePaths << appDir + "/Release/CalibrationModule.dll";
+    
+    // 4. Специальная папка build
+    possiblePaths << "./build/Debug/CalibrationModule.dll";
+    possiblePaths << "./build/Release/CalibrationModule.dll";
+    
+    // 5. Полные пути для отладки
+    possiblePaths << "D:/build/Debug/CalibrationModule.dll"; // измените на ваш путь
+    possiblePaths << "D:/your_project/build/Debug/CalibrationModule.dll"; // измените на ваш путь
+    
+    qDebug() << "Searching for CalibrationModule.dll...";
+    qDebug() << "Application dir:" << appDir;
+    
+    for (const QString& path : possiblePaths) {
+        qDebug() << "Trying:" << path;
+        
+        calibrationModule = new QLibrary(path);
+        
+        if (calibrationModule->load()) {
+            qDebug() << "SUCCESS: CalibrationModule.dll loaded from:" << path;
+            
+            // Загружаем функцию
+            showCalibrationDialogFunc = (ShowCalibrationDialogFunc)calibrationModule->resolve("showCalibrationDialog");
+            
+            if (showCalibrationDialogFunc) {
+                qDebug() << "showCalibrationDialog function resolved successfully";
+                
+                // Проверяем другие функции
+                typedef const char* (*GetVersionFunc)();
+                GetVersionFunc getVersionFunc = (GetVersionFunc)calibrationModule->resolve("getModuleVersion");
+                if (getVersionFunc) {
+                    qDebug() << "DLL version:" << getVersionFunc();
+                }
+                return; // Успех
+            } else {
+                qWarning() << "Failed to resolve function in:" << path;
+                calibrationModule->unload();
+                delete calibrationModule;
+                calibrationModule = nullptr;
+            }
+        } else {
+            qDebug() << "Failed to load from" << path << ":" << calibrationModule->errorString();
+            delete calibrationModule;
+            calibrationModule = nullptr;
+        }
+    }
+    
+    qWarning() << "CalibrationModule.dll not found or failed to load";
+    calibrationModule = nullptr;
+    showCalibrationDialogFunc = nullptr;
+}
+
+
+void MainWindow::openCalibration() {
+    // Проверяем, загружена ли DLL
+    if (calibrationModule && showCalibrationDialogFunc) {
+        qDebug() << "Calling showCalibrationDialog from DLL...";
+        // QApplication уже создан в main(), так что безопасно
+        showCalibrationDialogFunc(this);
+    } else {
+        // Fallback: используем встроенную версию или показываем сообщение
+        qWarning() << "Calibration module not available, using fallback";
+        QMessageBox::warning(this, "Предупреждение", 
+                           "Модуль калибровки не загружен.\n"
+                           "Убедитесь, что файл CalibrationModule.dll находится в той же директории, что и исполняемый файл.");
+        
+        // Если у вас есть встроенная версия диалога, можно использовать её:
+        // CalibrationDialog dialog(this);
+        // if (dialog.exec() == QDialog::Accepted) {
+        //     // обработка результатов
+        // }
+    }
 }

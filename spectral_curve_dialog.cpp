@@ -148,7 +148,6 @@ void SpectralCurveWidget::drawAxes(QPainter& painter, const QRect& plotRect) {
     
     painter.setFont(titleFont);
     
-    // Подпись оси X
     QString xAxisLabel;
     if (!spectralData.empty() && spectralData[0].hasWavelength) {
         xAxisLabel = QString::fromUtf8("Длина волны (нм)");
@@ -157,7 +156,6 @@ void SpectralCurveWidget::drawAxes(QPainter& painter, const QRect& plotRect) {
     }
     painter.drawText(plotRect.center().x() - 80, height() - 20, xAxisLabel);
     
-    // Подпись оси Y
     painter.save();
     painter.translate(20, plotRect.center().y());
     painter.rotate(-90);
@@ -320,7 +318,6 @@ QString SpectralCurveWidget::formatValue(double value, bool isWavelength) {
     }
 }
 
-// SpectralCurveDialog Implementation
 SpectralCurveDialog::SpectralCurveDialog(const HyperspectralImage* image, 
                                        const QVector<SpectralBand>& bands,
                                        int x, int y, 
@@ -339,7 +336,6 @@ SpectralCurveDialog::SpectralCurveDialog(const HyperspectralImage* image,
 void SpectralCurveDialog::setupUI() {
     QHBoxLayout* mainLayout = new QHBoxLayout(this);
     
-    // Левая часть - график
     QVBoxLayout* leftLayout = new QVBoxLayout();
     
     infoLabel = new QLabel();
@@ -497,7 +493,6 @@ void SpectralCurveDialog::updateLegend() {
         const auto& point = pinnedPoints[i];
         QListWidgetItem* item = new QListWidgetItem();
         
-        // Создаем цветной индикатор
         QString colorCircle;
         if (point.color == Qt::blue) colorCircle = "🔵";
         else if (point.color == Qt::green) colorCircle = "🟢";
@@ -534,7 +529,6 @@ void SpectralCurveDialog::onAddPointClicked() {
         addPointButton->setText(QString::fromUtf8("✓ Кликните на изображение"));
         addPointButton->setStyleSheet("QPushButton { padding: 8px; font-size: 10pt; background-color: #90EE90; }");
         
-        // Добавляем текущую точку как закрепленную
         QColor color = getNextColor();
         curveWidget->addPinnedPoint(pixelX, pixelY, spectralPoints, color);
         updateLegend();
@@ -547,7 +541,7 @@ void SpectralCurveDialog::onAddPointClicked() {
 
 void SpectralCurveDialog::onRemovePointClicked() {
     int currentRow = legendWidget->currentRow();
-    if (currentRow > 0) {  // Не удаляем текущую точку (индекс 0)
+    if (currentRow > 0) {
         curveWidget->removePinnedPoint(currentRow - 1);
         updateLegend();
     }
@@ -561,7 +555,7 @@ void SpectralCurveDialog::onClearPointsClicked() {
 
 void SpectralCurveDialog::onLegendItemDoubleClicked(QListWidgetItem* item) {
     int row = legendWidget->row(item);
-    if (row > 0) {  // Не удаляем текущую точку
+    if (row > 0) {
         curveWidget->removePinnedPoint(row - 1);
         updateLegend();
     }

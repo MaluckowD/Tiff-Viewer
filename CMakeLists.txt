@@ -68,6 +68,8 @@ endif()
 set(TIFF_INCLUDE_DIRS ${libtiff_SOURCE_DIR}/libtiff)
 set(TIFF_LIBRARIES tiff)
 
+add_subdirectory(calibration_module)
+
 # Список исходных файлов
 set(SOURCES
     main.cpp
